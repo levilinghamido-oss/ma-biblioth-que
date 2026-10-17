@@ -1,0 +1,2500 @@
+
+:root {
+    --navy: #0b1832;
+    --navy-light: #14294f;
+    --navy-nav: #203b6b;
+    --orange: #f5aa32;
+    --white: #ffffff;
+    --text-light: #c7d5ed;
+    --border-color: rgba(255, 255, 255, 0.13);
+}
+
+/* ================= GENERAL ================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+    width: 100%;
+    background: var(--navy);
+}
+
+/* الشريط العلوي */
+.top-bar {
+    min-height: 42px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #0a1630;
+    color: #d8e2f5;
+    font-size: 16px;
+}
+
+/* المنطقة الرئيسية */
+.header-main {
+    width: min(1500px, 100%);
+    min-height: 92px;
+    margin: auto;
+    padding: 15px 25px;
+    display: grid;
+    grid-template-columns: 1fr minmax(250px, 1.6fr) 0.5fr;
+    align-items: center;
+    gap: 35px;
+    background: var(--navy-light);
+}
+
+/* الشعار */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.logo-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--orange);
+    font-size: 27px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.logo-text strong {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    white-space: nowrap;
+}
+
+.logo-text small {
+    color: var(--orange);
+    font-size: 14px;
+}
+
+/* شريط البحث */
+.search-bar {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 35px;
+    background: var(--white);
+}
+
+.search-bar input {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: 17px;
+    color: #333333;
+}
+
+.search-bar button {
+    width: 70px;
+    flex-shrink: 0;
+    border: none;
+    background: var(--orange);
+    color: var(--navy);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background: #ffc15b;
+}
+
+/* السلة */
+.cart {
+    position: relative;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 19px;
+}
+
+.cart-icon {
+    font-size: 28px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -12px;
+    right: -16px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--orange);
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* قائمة التنقل */
+.main-nav {
+    background: var(--navy-nav);
+}
+
+.nav-container {
+    width: min(1500px, 100%);
+    min-height: 64px;
+    margin: auto;
+    padding: 0 25px;
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.nav-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 21px;
+    border-bottom: 4px solid transparent;
+    color: #dce5f6;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.nav-container a:hover,
+.nav-container a.active {
+    color: var(--white);
+    border-bottom-color: var(--orange);
+}
+.site-footer {
+    width: 100%;
+    background: var(--navy);
+    color: var(--text-light);
+}
+
+/* الأعمدة الأربعة */
+.footer-container {
+    width: min(1500px, 100%);
+    margin: auto;
+    padding: 55px 25px 45px;
+    display: grid;
+    grid-template-columns: 1.35fr 0.8fr 1fr 1fr;
+    gap: 45px;
+}
+
+.footer-column {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.footer-column h3 {
+    margin: 0 0 1px;
+    color: var(--white);
+    font-size: 20px;
+}
+
+.footer-column p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.footer-column > a {
+    font-size: 18px;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.footer-column > a:hover {
+    color: var(--orange);
+}
+
+/* وصف المكتبة */
+.footer-about p {
+    margin-top: -1px;
+}
+
+/* أيقونات التواصل الاجتماعي */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 7px;
+}
+
+.social-links a {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #25324d;
+    color: #d3def0;
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.social-links a:hover {
+    background: var(--orange);
+    color: var(--navy);
+}
+
+/* معلومات الاتصال */
+.footer-column:nth-child(3) p {
+    line-height: 1.5;
+}
+
+/* حقوق النشر */
+.footer-bottom {
+    min-height: 74px;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* ================= TABLETS ================= */
+@media (max-width: 1000px) {
+    .header-main {
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+    }
+
+    .search-bar {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .cart {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .nav-container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-container a {
+        min-height: 55px;
+        padding: 0 13px;
+        font-size: 15px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+    .top-bar {
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 9px 12px;
+    }
+
+    .header-main {
+        padding: 18px 15px;
+        gap: 18px 10px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 21px;
+    }
+
+    .logo-text strong {
+        font-size: 16px;
+        white-space: normal;
+    }
+
+    .logo-text small {
+        font-size: 12px;
+    }
+
+    .cart {
+        gap: 5px;
+        font-size: 14px;
+    }
+
+    .cart-icon {
+        font-size: 22px;
+    }
+
+    .search-bar {
+        height: 48px;
+    }
+
+    .search-bar input {
+        padding: 0 13px;
+        font-size: 13px;
+    }
+
+    .search-bar button {
+        width: 48px;
+        font-size: 25px;
+    }
+
+    .nav-container {
+        padding: 5px 8px;
+        gap: 0;
+    }
+
+    .nav-container a {
+        min-height: 44px;
+        padding: 0 10px;
+        font-size: 12px;
+        border-bottom-width: 3px;
+    }
+
+    /* الفوتر في الهاتف */
+    .footer-container {
+        padding: 35px 22px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-column h3 {
+        font-size: 18px;
+    }
+
+    .footer-column p,
+    .footer-column > a {
+        font-size: 16px;
+    }
+
+    .social-links a {
+        width: 43px;
+        height: 43px;
+        font-size: 22px;
+    }
+
+    .footer-bottom {
+        min-height: 65px;
+        padding: 17px 12px;
+    }
+
+    .footer-bottom p {
+        font-size: 13px;
+    }
+}
+
+/* Section Nos meilleures ventes */
+.meilleures-ventes {
+    padding: 50px 5%;
+    background-color: #f8f9fc;
+    text-align: center;
+}
+
+.meilleures-ventes h2 {
+    color: #142747;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #666;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+/* Conteneur des livres */
+.livres-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Carte de chaque livre */
+.livre {
+    background-color: white;
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.livre:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Images des livres */
+.livre img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* Titres */
+.livre h3 {
+    color: #142747;
+    font-size: 18px;
+    min-height: 44px;
+    margin: 10px 0;
+}
+
+.auteur {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Prix */
+.prix {
+    color: #f9aa2b;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* Bouton Acheter */
+.btn-acheter {
+    display: inline-block;
+    background-color: #142747;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-acheter:hover {
+    background-color: #f9aa2b;
+    color: #142747;
+}
+
+/* Bouton Voir tous les livres */
+.voir-plus {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 12px 25px;
+    border: 2px solid #142747;
+    border-radius: 5px;
+    color: #142747;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.voir-plus:hover {
+    background-color: #142747;
+    color: white;
+}
+
+/* Adaptation aux tablettes */
+@media (max-width: 900px) {
+    .livres-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+}
+
+/* Adaptation aux téléphones */
+@media (max-width: 480px) {
+    .meilleures-ventes {
+        padding: 35px 15px;
+    }
+
+    .meilleures-ventes h2 {
+        font-size: 24px;
+    }
+
+    .livres-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .livre {
+        padding: 12px 8px;
+    }
+
+    .livre img {
+        height: 160px;
+    }
+
+    .livre h3 {
+        font-size: 15px;
+    }
+}
+
+/* ===== NOS CATÉGORIES ===== */
+
+.categories-section {
+    padding: 45px 4% 55px;
+    background-color: #f8faff;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.categories-section * {
+    box-sizing: border-box;
+}
+
+/* Titre */
+.categories-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.categories-subtitle {
+    color: #f9aa2b;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.categories-header h2 {
+    color: #142747;
+    font-size: 30px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.categories-header p {
+    color: #68758a;
+    font-size: 15px;
+    margin: 0;
+}
+
+.categories-line {
+    width: 65px;
+    height: 4px;
+    background-color: #f9aa2b;
+    border-radius: 5px;
+    margin: 16px auto 0;
+}
+
+/* Grille des catégories */
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Carte */
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 235px;
+    padding: 22px 14px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 1px solid #e5eaf2;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(20, 39, 71, 0.05);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    border-color: #f9aa2b;
+    box-shadow: 0 10px 25px rgba(20, 39, 71, 0.12);
+}
+
+/* Images */
+.category-icon {
+    width: 100px;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.category-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-icon img {
+    transform: scale(1.08);
+}
+
+/* Textes */
+.category-card h3 {
+    color: #142747;
+    font-size: 17px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+}
+
+.category-card p {
+    color: #788397;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 0 12px;
+}
+
+.category-link {
+    color: #d98b12;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Tablettes */
+@media (max-width: 1000px) {
+    .categories-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+}
+
+/* Téléphones */
+@media (max-width: 600px) {
+    .categories-section {
+        padding: 35px 15px 40px;
+    }
+
+    .categories-header h2 {
+        font-size: 25px;
+    }
+
+    .categories-header p {
+        font-size: 13px;
+    }
+
+    .categories-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .category-card {
+        min-height: 205px;
+        padding: 16px 8px;
+    }
+
+    .category-icon {
+        width: 78px;
+        height: 75px;
+    }
+
+    .category-card h3 {
+        font-size: 15px;
+    }
+
+    .category-card p {
+        font-size: 12px;
+    }
+
+    .category-link {
+        font-size: 12px;
+    }
+}
+
+/* Accessibilité au clavier */
+.category-card:focus-visible {
+    outline: 3px solid #f9aa2b;
+    outline-offset: 3px;
+}
+
+
+/* ===== CORRECTION PAGE LIVRES ===== */
+
+#tous-les-livres.meilleures-ventes {
+    background-color: #f8faff;
+    padding: 45px 4% 55px;
+    color: #142747;
+}
+
+/* Titre et description */
+#tous-les-livres .section-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#tous-les-livres .section-subtitle {
+    display: block;
+    color: #d98b12;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+#tous-les-livres .section-header h2 {
+    color: #142747;
+    font-size: 30px;
+    margin: 0 0 12px;
+}
+
+#tous-les-livres .section-header p {
+    color: #626f82;
+    font-size: 15px;
+    margin: 0;
+}
+
+#tous-les-livres .titre-decoration {
+    width: 65px;
+    height: 4px;
+    background-color: #f9aa2b;
+    border-radius: 5px;
+    margin: 16px auto;
+}
+
+/* Grille des livres */
+#tous-les-livres .livres-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Cartes blanches */
+#tous-les-livres .livre-card {
+    background-color: #ffffff;
+    color: #142747;
+    border: 1px solid #e0e5ed;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(20, 39, 71, 0.08);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#tous-les-livres .livre-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(20, 39, 71, 0.15);
+}
+
+/* Zone des images */
+#tous-les-livres .livre-image {
+    position: relative;
+    height: 235px;
+    padding: 15px;
+    background-color: #f1f4f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tous-les-livres .livre-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Badge */
+#tous-les-livres .badge-livre {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f9aa2b;
+    color: #142747;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* Informations : forcer des couleurs lisibles */
+#tous-les-livres .livre-info {
+    background-color: #ffffff;
+    color: #142747;
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#tous-les-livres .livre-categorie {
+    color: #c17c00;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 0 8px;
+}
+
+#tous-les-livres .livre-info h3 {
+    color: #142747;
+    font-size: 17px;
+    line-height: 1.4;
+    min-height: 48px;
+    margin: 0 0 8px;
+}
+
+#tous-les-livres .livre-auteur {
+    color: #6b7280;
+    font-size: 13px;
+    margin: 0 0 18px;
+}
+
+/* Prix et bouton */
+#tous-les-livres .livre-bas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid #eeeeee;
+    padding-top: 14px;
+    margin-top: auto;
+}
+
+#tous-les-livres .livre-prix {
+    color: #142747;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#tous-les-livres .btn-livre {
+    display: inline-block;
+    background-color: #142747;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+#tous-les-livres .btn-livre:hover {
+    background-color: #f9aa2b;
+    color: #142747;
+}
+
+/* Tablettes */
+@media (max-width: 1000px) {
+    #tous-les-livres .livres-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+/* Téléphones */
+@media (max-width: 480px) {
+    #tous-les-livres.meilleures-ventes {
+        padding: 30px 15px;
+    }
+
+    #tous-les-livres .section-header h2 {
+        font-size: 24px;
+    }
+
+    #tous-les-livres .livre-image {
+        height: 160px;
+    }
+
+    #tous-les-livres .livre-info {
+        padding: 11px;
+    }
+
+    #tous-les-livres .livre-info h3 {
+        font-size: 14px;
+        min-height: 40px;
+    }
+
+    #tous-les-livres .livre-prix {
+        font-size: 15px;
+    }
+
+    #tous-les-livres .btn-livre {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+}
+
+/* =================================
+   PAGE AUTEURS - ALMAARIFA
+================================= */
+
+.auteurs-page {
+    background-color: #f7f9fc;
+    color: #142747;
+    font-family: Arial, sans-serif;
+    padding-bottom: 45px;
+}
+
+.auteurs-page * {
+    box-sizing: border-box;
+}
+
+/* ===== En-tête ===== */
+
+.auteurs-hero {
+    text-align: center;
+    padding: 48px 20px 40px;
+    background: linear-gradient(135deg, #ffffff, #eef3fb);
+}
+
+.auteurs-label {
+    display: inline-block;
+    color: #c7820d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.auteurs-hero h1 {
+    color: #142747;
+    font-size: 36px;
+    margin: 0 0 14px;
+    font-weight: bold;
+}
+
+.auteurs-hero p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #657188;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.auteurs-decoration {
+    width: 65px;
+    height: 4px;
+    background-color: #f9aa2b;
+    border-radius: 5px;
+    margin: 20px auto 0;
+}
+
+/* ===== Contenu ===== */
+
+.auteurs-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 35px 4% 45px;
+}
+
+.auteurs-titre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.auteurs-titre h2 {
+    color: #142747;
+    font-size: 26px;
+    margin: 0 0 8px;
+}
+
+.auteurs-titre p {
+    color: #6b7689;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.auteurs-total {
+    flex-shrink: 0;
+    background-color: #fff0d2;
+    color: #80530b;
+    border-radius: 20px;
+    padding: 9px 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ===== Grille ===== */
+
+.auteurs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* ===== Carte ===== */
+
+.auteur-card {
+    min-width: 0;
+    background-color: #ffffff;
+    border: 1px solid #e5eaf1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(20, 39, 71, 0.05);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.auteur-card:hover {
+    transform: translateY(-6px);
+    border-color: #f9aa2b;
+    box-shadow: 0 10px 24px rgba(20, 39, 71, 0.12);
+}
+
+/* ===== Zone des initiales ===== */
+
+.auteur-visuel {
+    min-height: 155px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.auteur-visuel::before {
+    content: "";
+    position: absolute;
+    width: 165px;
+    height: 165px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.auteur-initiales {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    font-size: 58px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Couleurs des auteurs */
+
+.avatar-vh {
+    background: linear-gradient(135deg, #142747, #395b89);
+}
+
+.avatar-pc {
+    background: linear-gradient(135deg, #b46a36, #eab66d);
+}
+
+.avatar-as {
+    background: linear-gradient(135deg, #29485f, #7198af);
+}
+
+.avatar-ac {
+    background: linear-gradient(135deg, #435266, #8997a9);
+}
+
+.avatar-go {
+    background: linear-gradient(135deg, #315653, #79a89b);
+}
+
+.avatar-v {
+    background: linear-gradient(135deg, #77503e, #c69a75);
+}
+
+/* Badge */
+
+.auteur-badge {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    z-index: 2;
+    background-color: #f9aa2b;
+    color: #142747;
+    border-radius: 5px;
+    padding: 6px 9px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* ===== Texte ===== */
+
+.auteur-info {
+    padding: 21px;
+}
+
+.auteur-pays {
+    display: inline-block;
+    color: #c7820d;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.auteur-info h3 {
+    color: #142747;
+    font-size: 19px;
+    line-height: 1.4;
+    margin: 0 0 12px;
+}
+
+.auteur-info p {
+    color: #69758a;
+    font-size: 14px;
+    line-height: 1.8;
+    min-height: 75px;
+    margin: 0 0 18px;
+}
+
+/* Lien */
+
+.auteur-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 14px;
+    border-top: 1px solid #edf0f4;
+    color: #142747;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.auteur-link span {
+    color: #e99a1b;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.auteur-link:hover {
+    color: #d98b12;
+}
+
+.auteur-link:hover span {
+    transform: translateX(5px);
+}
+
+/* ===== Invitation finale ===== */
+
+.auteurs-cta {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px 35px;
+    width: 92%;
+    background-color: #142747;
+    color: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.auteurs-cta h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin: 0 0 10px;
+}
+
+.auteurs-cta p {
+    color: #d6deeb;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-shrink: 0;
+    padding: 13px 20px;
+    background-color: #f9aa2b;
+    color: #142747;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffc45f;
+}
+
+.cta-button span {
+    font-size: 19px;
+}
+
+/* ===== Tablettes ===== */
+
+@media (max-width: 950px) {
+    .auteurs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .auteurs-hero h1 {
+        font-size: 30px;
+    }
+
+    .auteurs-cta {
+        padding: 25px;
+    }
+}
+
+/* ===== Téléphones ===== */
+
+@media (max-width: 520px) {
+    .auteurs-hero {
+        padding: 35px 18px;
+    }
+
+    .auteurs-hero h1 {
+        font-size: 26px;
+    }
+
+    .auteurs-hero p {
+        font-size: 14px;
+    }
+
+    .auteurs-content {
+        padding: 28px 13px 35px;
+    }
+
+    .auteurs-titre {
+        align-items: flex-start;
+    }
+
+    .auteurs-titre h2 {
+        font-size: 22px;
+    }
+
+    .auteurs-titre p {
+        font-size: 12px;
+    }
+
+    .auteurs-total {
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+
+    .auteurs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .auteur-visuel {
+        min-height: 115px;
+    }
+
+    .auteur-initiales {
+        font-size: 42px;
+    }
+
+    .auteur-badge {
+        top: 7px;
+        left: 7px;
+        font-size: 9px;
+        padding: 5px 6px;
+    }
+
+    .auteur-info {
+        padding: 12px;
+    }
+
+    .auteur-info h3 {
+        font-size: 15px;
+    }
+
+    .auteur-info p {
+        font-size: 12px;
+        line-height: 1.6;
+        min-height: 100px;
+    }
+
+    .auteur-link {
+        font-size: 11px;
+    }
+
+    .auteurs-cta {
+        width: calc(100% - 26px);
+        padding: 22px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .auteurs-cta h2 {
+        font-size: 19px;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   PAGE A PROPOS - BIBLIOTHEQUE ALMAARIFA
+========================================== */
+
+.apropos-page {
+    --apropos-bleu: #142747;
+    --apropos-bleu-clair: #223e68;
+    --apropos-orange: #f9aa2b;
+    --apropos-gris: #68758a;
+
+    background: #ffffff;
+    color: var(--apropos-bleu);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.apropos-page * {
+    box-sizing: border-box;
+}
+
+.apropos-page a {
+    transition: background-color 0.3s,
+                color 0.3s,
+                transform 0.3s;
+}
+
+/* ===== HERO ===== */
+
+.apropos-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    padding: 55px 7%;
+    min-height: 340px;
+    background: linear-gradient(120deg, #f7f9fd, #eef3fb);
+}
+
+.apropos-hero-content {
+    flex: 1;
+    max-width: 620px;
+}
+
+.apropos-label,
+.apropos-petit-titre {
+    display: inline-block;
+    color: #c7830c;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    margin-bottom: 13px;
+}
+
+.apropos-hero h1 {
+    color: var(--apropos-bleu);
+    font-size: 36px;
+    line-height: 1.3;
+    margin: 0 0 18px;
+}
+
+.apropos-hero h1 span {
+    color: #d98b12;
+}
+
+.apropos-hero-content > p {
+    color: var(--apropos-gris);
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 540px;
+    margin: 0 0 25px;
+}
+
+/* Bouton principal */
+
+.apropos-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: var(--apropos-bleu);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.apropos-btn span {
+    color: var(--apropos-orange);
+    font-size: 20px;
+}
+
+.apropos-btn:hover {
+    background: var(--apropos-orange);
+    color: var(--apropos-bleu);
+    transform: translateY(-2px);
+}
+
+.apropos-btn:hover span {
+    color: var(--apropos-bleu);
+}
+
+/* ===== Illustration CSS ===== */
+
+.apropos-illustration {
+    position: relative;
+    flex: 0 0 350px;
+    width: 350px;
+    height: 265px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration-cercle {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background: #e0e9f7;
+    border-radius: 50%;
+}
+
+.illustration-livre {
+    position: relative;
+    z-index: 2;
+    width: 170px;
+    height: 210px;
+    background: var(--apropos-bleu);
+    color: #ffffff;
+    border: 5px solid var(--apropos-orange);
+    border-radius: 5px 13px 13px 5px;
+    box-shadow: 9px 10px 0 rgba(20, 39, 71, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.illustration-livre span {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.illustration-livre strong {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.illustration-livre small {
+    color: var(--apropos-orange);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 12px;
+}
+
+.livre-deco {
+    position: absolute;
+    z-index: 1;
+    width: 45px;
+    height: 145px;
+    border-radius: 5px;
+    writing-mode: vertical-rl;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.livre-deco-1 {
+    left: 15px;
+    bottom: 28px;
+    background: #e7a84c;
+    color: var(--apropos-bleu);
+    transform: rotate(-8deg);
+}
+
+.livre-deco-2 {
+    right: 20px;
+    bottom: 27px;
+    background: #395a82;
+    color: #ffffff;
+    transform: rotate(8deg);
+}
+
+.livre-deco-3 {
+    left: 45px;
+    top: 19px;
+    width: 34px;
+    height: 85px;
+    background: #88a9b9;
+    color: var(--apropos-bleu);
+    transform: rotate(-15deg);
+}
+
+.etoile {
+    position: absolute;
+    z-index: 3;
+    color: #e8a023;
+    font-size: 35px;
+}
+
+.etoile-1 {
+    top: 20px;
+    right: 40px;
+}
+
+.etoile-2 {
+    left: 12px;
+    top: 40px;
+    font-size: 25px;
+}
+
+/* ===== QUI SOMMES-NOUS ===== */
+
+.apropos-intro {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 65px 5%;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 55px;
+    align-items: start;
+}
+
+.apropos-intro-titre h2,
+.valeurs-header h2 {
+    color: var(--apropos-bleu);
+    font-size: 30px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.apropos-trait {
+    width: 60px;
+    height: 4px;
+    background: var(--apropos-orange);
+    border-radius: 4px;
+    margin-top: 17px;
+}
+
+.apropos-intro-texte p {
+    color: var(--apropos-gris);
+    font-size: 15px;
+    line-height: 2;
+    margin: 0 0 17px;
+}
+
+.apropos-intro-texte strong {
+    color: var(--apropos-bleu);
+}
+
+/* ===== MISSION ET VISION ===== */
+
+.apropos-mission {
+    background: #f6f8fc;
+    padding: 48px 5%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.mission-card {
+    background: #ffffff;
+    border: 1px solid #e6ebf3;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(20, 39, 71, 0.04);
+    border-bottom: 4px solid var(--apropos-bleu);
+}
+
+.mission-card-orange {
+    border-bottom-color: var(--apropos-orange);
+}
+
+.mission-icon {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 17px;
+    background: #edf2fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+}
+
+.mission-card h3 {
+    color: var(--apropos-bleu);
+    font-size: 22px;
+    margin: 0 0 12px;
+}
+
+.mission-card p {
+    color: var(--apropos-gris);
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+/* ===== VALEURS ===== */
+
+.apropos-valeurs {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 65px 5%;
+}
+
+.valeurs-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.valeurs-header > p {
+    color: var(--apropos-gris);
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 12px 0 0;
+}
+
+.apropos-trait {
+    margin-left: 0;
+}
+
+.valeurs-header .apropos-trait {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.valeurs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.valeur-card {
+    padding: 28px 19px;
+    background: #ffffff;
+    border: 1px solid #e4e9f1;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.valeur-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 24px rgba(20, 39, 71, 0.09);
+}
+
+.valeur-icon {
+    width: 64px;
+    height: 64px;
+    background: #fff2d9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+    margin: 0 auto 17px;
+}
+
+.valeur-card h3 {
+    color: var(--apropos-bleu);
+    font-size: 17px;
+    margin: 0 0 11px;
+}
+
+.valeur-card p {
+    color: var(--apropos-gris);
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+/* ===== POURQUOI ALMAARIFA ===== */
+
+.apropos-choix {
+    background: #f6f8fc;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    align-items: center;
+    padding: 55px 7%;
+}
+
+.choix-contenu h2 {
+    color: var(--apropos-bleu);
+    font-size: 29px;
+    line-height: 1.4;
+    margin: 0 0 15px;
+}
+
+.choix-contenu > p {
+    color: var(--apropos-gris);
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0 0 20px;
+}
+
+.choix-liste {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+}
+
+.choix-liste li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--apropos-bleu);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.choix-check {
+    flex-shrink: 0;
+    width: 23px;
+    height: 23px;
+    background: #fff0d0;
+    color: #98600b;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Illustration de droite */
+
+.choix-visuel {
+    position: relative;
+    min-height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choix-grand-cercle {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #e0e9f7;
+    border-radius: 50%;
+}
+
+.choix-livre {
+    position: relative;
+    z-index: 1;
+    width: 250px;
+    min-height: 210px;
+    padding: 27px 20px;
+    background: var(--apropos-bleu);
+    border-radius: 8px;
+    border-left: 6px solid var(--apropos-orange);
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 12px 28px rgba(20, 39, 71, 0.16);
+}
+
+.choix-livre > span {
+    font-size: 43px;
+}
+
+.choix-livre h3 {
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 9px 0;
+}
+
+.choix-livre p {
+    color: #f9c46f;
+    font-size: 12px;
+    margin: 0;
+}
+
+.choix-decoration {
+    position: absolute;
+    z-index: 2;
+    bottom: 12px;
+    right: 0;
+    background: var(--apropos-orange);
+    color: var(--apropos-bleu);
+    padding: 11px 15px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* ===== CTA FINAL ===== */
+
+.apropos-cta {
+    margin: 55px auto 0;
+    width: 90%;
+    padding: 38px 20px;
+    background: var(--apropos-bleu);
+    color: #ffffff;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.apropos-cta h2 {
+    color: #ffffff;
+    font-size: 26px;
+    line-height: 1.5;
+    margin: 0 0 12px;
+}
+
+.apropos-cta p {
+    color: #d8e0ee;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 auto 23px;
+    max-width: 600px;
+}
+
+.cta-apropos-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 13px 23px;
+    background: var(--apropos-orange);
+    color: var(--apropos-bleu);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cta-apropos-btn:hover {
+    background: #ffc45f;
+    transform: translateY(-2px);
+}
+
+.cta-apropos-btn span {
+    font-size: 20px;
+}
+
+/* ===== TABLETTES ===== */
+
+@media (max-width: 900px) {
+    .apropos-hero {
+        padding: 40px 5%;
+        gap: 15px;
+    }
+
+    .apropos-hero h1 {
+        font-size: 30px;
+    }
+
+    .apropos-illustration {
+        flex-basis: 290px;
+        width: 290px;
+        transform: scale(0.9);
+    }
+
+    .apropos-intro {
+        gap: 30px;
+    }
+
+    .valeurs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .apropos-choix {
+        padding: 45px 5%;
+        gap: 20px;
+    }
+}
+
+/* ===== TÉLÉPHONES ===== */
+
+@media (max-width: 600px) {
+    .apropos-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 18px;
+    }
+
+    .apropos-hero h1 {
+        font-size: 27px;
+    }
+
+    .apropos-hero-content > p {
+        font-size: 14px;
+    }
+
+    .apropos-illustration {
+        flex: none;
+        width: 100%;
+        max-width: 320px;
+        height: 235px;
+        transform: scale(0.85);
+        margin: -5px auto;
+    }
+
+    .apropos-intro {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 40px 20px;
+    }
+
+    .apropos-intro-titre h2,
+    .valeurs-header h2 {
+        font-size: 25px;
+    }
+
+    .apropos-intro-texte p {
+        font-size: 14px;
+    }
+
+    .apropos-mission {
+        grid-template-columns: 1fr;
+        gap: 17px;
+        padding: 35px 18px;
+    }
+
+    .mission-card {
+        padding: 25px 20px;
+    }
+
+    .apropos-valeurs {
+        padding: 42px 15px;
+    }
+
+    .valeurs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .valeur-card {
+        padding: 22px 12px;
+    }
+
+    .valeur-card h3 {
+        font-size: 15px;
+    }
+
+    .valeur-card p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .valeur-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 25px;
+    }
+
+    .apropos-choix {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 40px 20px;
+    }
+
+    .choix-contenu h2 {
+        font-size: 25px;
+    }
+
+    .choix-contenu > p {
+        font-size: 14px;
+    }
+
+    .choix-visuel {
+        min-height: 260px;
+    }
+
+    .apropos-cta {
+        width: calc(100% - 30px);
+        margin-top: 35px;
+        padding: 30px 18px;
+    }
+
+    .apropos-cta h2 {
+        font-size: 22px;
+    }
+
+    .apropos-cta p {
+        font-size: 13px;
+    }
+
+    .cta-apropos-btn {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   PAGE CONTACT - BIBLIOTHEQUE ALMAARIFA
+========================================= */
+
+.contact-page {
+    --contact-bleu: #142747;
+    --contact-orange: #f9aa2b;
+    --contact-gris: #68758a;
+
+    background-color: #f7f9fc;
+    color: var(--contact-bleu);
+    font-family: Arial, sans-serif;
+}
+
+.contact-page * {
+    box-sizing: border-box;
+}
+
+/* ===== En-tête ===== */
+
+.contact-hero {
+    padding: 42px 20px 38px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff, #edf2fa);
+}
+
+.contact-label {
+    display: inline-block;
+    color: #c7830c;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.contact-hero h1 {
+    color: var(--contact-bleu);
+    font-size: 35px;
+    margin: 0 0 12px;
+    line-height: 1.4;
+}
+
+.contact-hero > p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--contact-gris);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.contact-decoration {
+    width: 65px;
+    height: 4px;
+    background: var(--contact-orange);
+    border-radius: 5px;
+    margin: 17px auto 0;
+}
+
+/* ===== Organisation principale ===== */
+
+.contact-container {
+    max-width: 1250px;
+    width: 92%;
+    margin: 0 auto;
+    padding: 45px 0 55px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 35px;
+}
+
+/* ===== Colonne informations ===== */
+
+.contact-informations {
+    padding: 10px 0;
+}
+
+.contact-small-title {
+    display: inline-block;
+    color: #c7830c;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.contact-informations h2 {
+    color: var(--contact-bleu);
+    font-size: 28px;
+    line-height: 1.45;
+    margin: 0 0 15px;
+}
+
+.contact-intro {
+    color: var(--contact-gris);
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 0 0 25px;
+}
+
+/* Cartes d'informations */
+
+.contact-info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 17px;
+    margin-bottom: 14px;
+
+    background: #ffffff;
+    border: 1px solid #e5eaf2;
+    border-radius: 9px;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(20, 39, 71, 0.08);
+}
+
+.contact-info-icon {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff1d5;
+    border-radius: 9px;
+    font-size: 22px;
+}
+
+.contact-info-card h3 {
+    color: var(--contact-bleu);
+    font-size: 16px;
+    margin: 2px 0 7px;
+}
+
+.contact-info-card p {
+    color: var(--contact-gris);
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Lien catalogue */
+
+.contact-catalogue-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 12px;
+    padding: 12px 18px;
+
+    color: var(--contact-bleu);
+    border: 2px solid var(--contact-bleu);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: all 0.3s;
+}
+
+.contact-catalogue-btn span {
+    color: #d98b12;
+    font-size: 19px;
+}
+
+.contact-catalogue-btn:hover {
+    background: var(--contact-bleu);
+    color: #ffffff;
+}
+
+/* ===== Formulaire ===== */
+
+.contact-form-card {
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #e5eaf2;
+    border-radius: 12px;
+    box-shadow: 0 5px 22px rgba(20, 39, 71, 0.06);
+}
+
+.contact-form-header {
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e9edf3;
+}
+
+.contact-form-header h2 {
+    color: var(--contact-bleu);
+    font-size: 23px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+}
+
+.contact-form-header p {
+    color: var(--contact-gris);
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Champs côte à côte */
+
+.contact-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.contact-field {
+    min-width: 0;
+    margin-bottom: 19px;
+}
+
+.contact-field label {
+    display: block;
+    color: var(--contact-bleu);
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 13px;
+
+    color: var(--contact-bleu);
+    background: #fbfcfe;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    border: 1px solid #dce3ed;
+    border-radius: 6px;
+    outline: none;
+
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-field input,
+.contact-field select {
+    min-height: 44px;
+}
+
+.contact-field textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: #9aa4b3;
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+    border-color: var(--contact-orange);
+    box-shadow: 0 0 0 3px rgba(249, 170, 43, 0.15);
+}
+
+/* Message obligatoire */
+
+.contact-required {
+    color: #788397;
+    font-size: 11px;
+    margin: -5px 0 17px;
+}
+
+/* Bouton d'envoi */
+
+.contact-submit {
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background: var(--contact-bleu);
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-submit span {
+    color: var(--contact-orange);
+    font-size: 20px;
+}
+
+.contact-submit:hover {
+    background: #243f69;
+    transform: translateY(-2px);
+}
+
+/* ===== Partie basse ===== */
+
+.contact-bottom {
+    width: 92%;
+    max-width: 1250px;
+
+    margin: 0 auto 50px;
+    padding: 30px 20px;
+
+    background: #142747;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.contact-bottom-icon {
+    font-size: 31px;
+    margin-bottom: 8px;
+}
+
+.contact-bottom h2 {
+    color: #ffffff;
+    font-size: 23px;
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+.contact-bottom p {
+    color: #dce5f2;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 20px;
+}
+
+.contact-bottom-btn {
+    display: inline-block;
+    padding: 12px 22px;
+
+    color: #142747;
+    background: #f9aa2b;
+
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: background-color 0.3s;
+}
+
+.contact-bottom-btn:hover {
+    background: #ffc45f;
+}
+
+/* ===== Tablettes ===== */
+
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+        gap: 25px;
+    }
+
+    .contact-informations h2 {
+        font-size: 25px;
+    }
+}
+
+/* ===== Téléphones ===== */
+
+@media (max-width: 520px) {
+    .contact-hero {
+        padding: 32px 17px;
+    }
+
+    .contact-hero h1 {
+        font-size: 27px;
+    }
+
+    .contact-hero > p {
+        font-size: 13px;
+    }
+
+    .contact-container {
+        width: calc(100% - 28px);
+        padding: 30px 0 35px;
+        gap: 20px;
+    }
+
+    .contact-informations h2 {
+        font-size: 23px;
+    }
+
+    .contact-form-card {
+        padding: 20px 15px;
+    }
+
+    .contact-form-header h2 {
+        font-size: 20px;
+    }
+
+    .contact-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-field input,
+    .contact-field select,
+    .contact-field textarea {
+        font-size: 14px;
+    }
+
+    .contact-bottom {
+        width: calc(100% - 28px);
+        margin-bottom: 30px;
+        padding: 25px 15px;
+    }
+
+    .contact-bottom h2 {
+        font-size: 20px;
+    }
+
+    .contact-bottom p {
+        font-size: 13px;
+    }
+}

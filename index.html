@@ -4,81 +4,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ma Bibliothèque</title>
-    <style>
-        a:link {color: black;background-color: transparent;text-decoration: none;}
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div style="background-image: url('photo.jpg');"><h1 style="text-align: center;color: white;">Bibliothèque Al maarifa </h1>
-  <ul style="color: aliceblue;">
-    <fieldset>
-    <a style="color: aliceblue;" href="index.html">Accueil|</a>
-    <a style="color: aliceblue;" href="Livres.html">Livres |</a>
-    <a style="color: aliceblue;" href="Auteurs.html">Auteurs |</a>
-    <a style="color: aliceblue;" href="contact.html">contact |</a>
-    <a style="color: aliceblue;" href="À propos.html">À propos |</a>
-    </fieldset>
-  </ul>
-  <p style="font-size: x-large;color: aliceblue;"><b>Bienvenue sur Ma Bibliothèque</b></p>
-  <p style="color: aliceblue;">Découvrez un large choix de livres pour tous les goûts <br>et tous les ages.</br></p>
-  <form action="action_page_recherche.php"method="post">
-    <label for="recherche">recherche</label><br>
-    <input type="text" id="recherche" name="recherche" style="width: 500px;height: 20px;"placeholder="Rchercher un livre,un auteur,un mot-clé...">
-    <input type="submit" value="recherche"></div>
-<p style="text-align: center;"><b>______Nos catégories______</b></p>
-<table cellspacing="100">
-  <tr>
-    <td>
-<a href="Livres.html" ><img src="livre.png" width="80px">
-<br>Romans
-</td>
-<td><a href="Livres.html" ><img src="science.png" height="80px" width="80px"><br>science</td>
-<td><a href="Livres.html" ><img src="programmation.png" height="80px" width="80px"><br>informatique</td>
-<td><a href="Livres.html" ><img src="pile.livres.png" height="80px" width="80px"><br>Livres scolaires </td>
-<td><a href="Livres.html" ><img src="histoire.png" height="80px" width="80px"><br>Histoire</td>
-<td><a href="Livres.html" ><img src="self-development.png" height="80px" width="80px"><br>Développement personnel</td>
-<td><a href="Livres.html" ><img src="art-et-technologie.png" height="80px" width="80px"><br>Arts & Culture</td>
-  </tr>
-</table>
- <div style="background-image: url('ecranbleu.jpg');">
-<fieldset>
-  <table style="width: 70%;color: aliceblue;">
- <tr>
-  <th>Ma Bibliothèque</th>
-  <th>liens rapides</th>
-  <th>Nous Contacter</th>
-  <th>Suivez-nous</th>
- </tr>
- <tr>
-  <td>lire,apprendre,grandir</td>
-  <td><a href="index.html" style="color: aliceblue;">Accueil</td>
-  <td>123 Avenue des livres,Agadir</td>
- </tr>
- <tr>
-  <td></td>
-  <td><a href="Livres.html" style="color: aliceblue;">Livres</td>
-  <td>+212 602445577</td>
- </tr>
- <tr>
-  <td></td>
-  <td><a href="Auteurs.html" style="color: aliceblue;">Auteurs</td>
-  <td>Bibliothèque@gmail.com</td>
- </tr>
- <tr>
-  <td></td>
-  <td><a href="contact.html" style="color: aliceblue;">Contact</td>
- </tr>
- <tr>
-  <td></td>
-  <td><a href="À propos.html" style="color: aliceblue;">À propos</td>
- </tr>
-</fieldset>
-</table>
-<fieldset >
-<br>
-<p style="text-align: center; color: aliceblue;">2027 Ma Bibliothèque.Tous droits réservés.</p>
-</fieldset>
- </div>
+  <header class="site-header">
+
+    <div class="top-bar">
+        Livraison partout au Maroc · Paiement et commande en mode démonstration
+    </div>
+
+    <div class="header-main">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">📖</span>
+            <span class="logo-text">
+                <strong>Bibliothèque Almaarifa</strong>
+                <small>Librairie en ligne</small>
+            </span>
+        </a>
+
+        <form class="search-bar" action="#" method="get">
+            <input
+                type="search"
+                name="recherche"
+                placeholder="Rechercher un titre, un auteur, une catégorie..."
+            >
+            <button type="submit" aria-label="Rechercher">⌕</button>
+        </form>
+
+        <a href="panier.html" class="cart">
+            <span class="cart-icon">🛒</span>
+            <strong>Panier</strong>
+            <span class="cart-count">0</span>
+        </a>
+
+    </div>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="active">ACCUEIL</a>
+            <a href="livres.html" >LIVRES</a>
+            <a href="auteurs.html" >AUTEURS</a>
+            <a href="À propos.html" >À PROPOS</a>
+            <a href="contact.html" >CONTACT</a>
+        </div>
+    </nav>
+
+<!-- Section Nos catégories -->
+<section class="categories-section" id="categories">
+
+    <div class="categories-header">
+        <span class="categories-subtitle">EXPLOREZ NOTRE BIBLIOTHÈQUE</span>
+        <h2>Nos catégories</h2>
+        <p>Découvrez un univers de lecture adapté à vos envies.</p>
+        <div class="categories-line"></div>
+    </div>
+
+    <div class="categories-container">
+
+        <a href="livres.html" class="category-card">
+            <div class="category-icon">
+                <img src="livre.png" alt="Romans">
+            </div>
+            <h3>Romans</h3>
+            <p>Histoires et aventures</p>
+            <span class="category-link">Découvrir →</span>
+        </a>
+
+        <a href="livres.html" class="category-card">
+            <div class="category-icon">
+                <img src="science.png" alt="Science">
+            </div>
+            <h3>Science</h3>
+            <p>Explorez les connaissances</p>
+            <span class="category-link">Découvrir →</span>
+        </a>
+
+        <a href="livres.html" class="category-card">
+            <div class="category-icon">
+                <img src="programmation.png" alt="Informatique">
+            </div>
+            <h3>Informatique</h3>
+            <p>Technologie et numérique</p>
+            <span class="category-link">Découvrir →</span>
+        </a>
+
+        <a href="livres.html" class="category-card">
+            <div class="category-icon">
+                <img src="pile.livres.png" alt="Livres scolaires">
+            </div>
+            <h3>Livres scolaires</h3>
+            <p>Apprendre et progresser</p>
+            <span class="category-link">Découvrir →</span>
+        </a>
+
+        <a href="livres.html" class="category-card">
+            <div class="category-icon">
+                <img src="histoire.png" alt="Histoire">
+            </div>
+            <h3>Histoire</h3>
+            <p>Voyagez dans le passé</p>
+            <span class="category-link">Découvrir →</span>
+        </a>
+
+        <a href="livres.html" class="category-card">
+            <div class="category-icon">
+                <img src="self-development.png"
+                     alt="Développement personnel">
+            </div>
+            <h3>Développement personnel</h3>
+            <p>Grandissez chaque jour</p>
+            <span class="category-link">Découvrir →</span>
+        </a>
+
+        <a href="livres.html" class="category-card">
+            <div class="category-icon">
+                <img src="art-et-technologie.png" alt="Arts et Culture">
+            </div>
+            <h3>Arts &amp; Culture</h3>
+            <p>Créativité et inspiration</p>
+            <span class="category-link">Découvrir →</span>
+        </a>
+
+    </div>
+
+</section>
+
+    
+<!-- Section Nos meilleures ventes -->
+<section class="meilleures-ventes">
+
+    <h2>Nos meilleures ventes</h2>
+    <p class="description">
+        Découvrez notre sélection de livres préférés
+    </p>
+
+    <div class="livres-container">
+
+        <div class="livre">
+            <img src="images.jpg" alt="Le Petit Prince">
+            <h3>Le Petit Prince</h3>
+            <p class="auteur">Antoine de Saint-Exupéry</p>
+            <p class="prix">80 DH</p>
+            <a href="#" class="btn-acheter">Acheter</a>
+        </div>
+
+        <div class="livre">
+            <img src="les mesirables.jpg" alt="Les Misérables">
+            <h3>Les Misérables</h3>
+            <p class="auteur">Victor Hugo</p>
+            <p class="prix">120 DH</p>
+            <a href="#" class="btn-acheter">Acheter</a>
+        </div>
+
+        <div class="livre">
+            <img src="lalchimeste.jpg" alt="L'Alchimiste">
+            <h3>L'Alchimiste</h3>
+            <p class="auteur">Paulo Coelho</p>
+            <p class="prix">95 DH</p>
+            <a href="#" class="btn-acheter">Acheter</a>
+        </div>
+
+        <div class="livre">
+            <img src="le-pouvoir-du-moment-present.jpg" alt="Le pouvoir du moment présent">
+            <h3>Le pouvoir du moment présent</h3>
+            <p class="auteur">Eckhart Tolle</p>
+            <p class="prix">110 DH</p>
+            <a href="#" class="btn-acheter">Acheter</a>
+        </div>
+
+    </div>
+
+    <a href="livres.html" class="voir-plus">
+        Voir tous les livres →
+    </a>
+
+</section>
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- Colonne 1 : Présentation -->
+        <div class="footer-column footer-about">
+            <h3>Bibliothèque Almaarifa</h3>
+
+            <p>
+                Votre librairie en ligne au Maroc : des livres
+                pour tous les âges, en français et en langues
+                du monde, livrés chez vous.
+            </p>
+
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">◎</a>
+                <a href="#" aria-label="YouTube">▷</a>
+                <a href="#" aria-label="WhatsApp">☏</a>
+            </div>
+        </div>
+
+        <!-- Colonne 2 : Navigation -->
+        <div class="footer-column">
+            <h3>Navigation</h3>
+            <a href="index.html">Accueil</a>
+            <a href="livres.html">Livres</a>
+            <a href="auteurs.html">Auteurs</a>
+            <a href="À propos.html">À propos</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Colonne 3 : Contact -->
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>[Votre adresse e-mail]</p>
+            <p>[Votre numéro de téléphone]</p>
+            <p>[Votre adresse, ville, Maroc]</p>
+        </div>
+
+        <!-- Colonne 4 : Service client -->
+        <div class="footer-column">
+            <h3>Service client</h3>
+            <a href="#">Questions fréquentes</a>
+            <a href="#">Livraison et retours</a>
+            <a href="contact.html">Nous écrire</a>
+            <a href="panier.html">Mon panier</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026 Bibliothèque Almaarifa. Tous droits réservés.
+        </p>
+    </div>
+
+</footer>
 </body>
 </html>

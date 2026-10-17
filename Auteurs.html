@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Bibliothèque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+
+    <div class="top-bar">
+        Livraison partout au Maroc · Paiement et commande en mode démonstration
+    </div>
+
+    <div class="header-main">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">📖</span>
+            <span class="logo-text">
+                <strong>Bibliothèque Almaarifa</strong>
+                <small>Librairie en ligne</small>
+            </span>
+        </a>
+
+        <form class="search-bar" action="#" method="get">
+            <input
+                type="search"
+                name="recherche"
+                placeholder="Rechercher un titre, un auteur, une catégorie..."
+            >
+            <button type="submit" aria-label="Rechercher">⌕</button>
+        </form>
+
+        <a href="panier.html" class="cart">
+            <span class="cart-icon">🛒</span>
+            <strong>Panier</strong>
+            <span class="cart-count">0</span>
+        </a>
+
+    </div>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" >ACCUEIL</a>
+            <a href="livres.html">LIVRES</a>
+            <a href="auteurs.html"class="active">AUTEURS</a>
+            <a href="À propos.html">À PROPOS</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </nav>
+</header>
+
+<!-- ===== PAGE AUTEURS ===== -->
+<main class="auteurs-page">
+
+    <!-- En-tête de la page -->
+    <section class="auteurs-hero">
+        <span class="auteurs-label">BIBLIOTHÈQUE ALMAARIFA</span>
+
+        <h1>Découvrez nos auteurs</h1>
+
+        <p>
+            Explorez l'univers des écrivains qui ont marqué
+            la littérature et inspiré des générations.
+        </p>
+
+        <div class="auteurs-decoration"></div>
+    </section>
+
+    <!-- Présentation -->
+    <section class="auteurs-content">
+
+        <div class="auteurs-titre">
+            <div>
+                <h2>Nos écrivains</h2>
+                <p>Des histoires, des idées et des inspirations à découvrir.</p>
+            </div>
+
+            <span class="auteurs-total">6 auteurs</span>
+        </div>
+
+        <!-- Grille des auteurs -->
+        <div class="auteurs-grid">
+
+            <!-- Auteur 1 -->
+            <article class="auteur-card">
+                <div class="auteur-visuel avatar-vh">
+                    <span class="auteur-initiales">VH</span>
+                    <span class="auteur-badge">Classique</span>
+                </div>
+
+                <div class="auteur-info">
+                    <span class="auteur-pays">France</span>
+                    <h3>Victor Hugo</h3>
+                    <p>
+                        Un grand écrivain français, connu notamment
+                        pour Les Misérables et Notre-Dame de Paris.
+                    </p>
+
+                    <a href="livres.html" class="auteur-link">
+                        Découvrir ses livres <span>→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Auteur 2 -->
+            <article class="auteur-card">
+                <div class="auteur-visuel avatar-pc">
+                    <span class="auteur-initiales">PC</span>
+                    <span class="auteur-badge">Populaire</span>
+                </div>
+
+                <div class="auteur-info">
+                    <span class="auteur-pays">Brésil</span>
+                    <h3>Paulo Coelho</h3>
+                    <p>
+                        Un romancier brésilien célèbre pour ses récits
+                        sur les rêves, les voyages et la découverte de soi.
+                    </p>
+
+                    <a href="livres.html" class="auteur-link">
+                        Découvrir ses livres <span>→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Auteur 3 -->
+            <article class="auteur-card">
+                <div class="auteur-visuel avatar-as">
+                    <span class="auteur-initiales">AS</span>
+                    <span class="auteur-badge">Incontournable</span>
+                </div>
+
+                <div class="auteur-info">
+                    <span class="auteur-pays">France</span>
+                    <h3>Antoine de Saint-Exupéry</h3>
+                    <p>
+                        Écrivain et aviateur, célèbre dans le monde
+                        entier pour Le Petit Prince.
+                    </p>
+
+                    <a href="livres.html" class="auteur-link">
+                        Découvrir ses livres <span>→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Auteur 4 -->
+            <article class="auteur-card">
+                <div class="auteur-visuel avatar-ac">
+                    <span class="auteur-initiales">AC</span>
+                    <span class="auteur-badge">Philosophie</span>
+                </div>
+
+                <div class="auteur-info">
+                    <span class="auteur-pays">France / Algérie</span>
+                    <h3>Albert Camus</h3>
+                    <p>
+                        Écrivain et philosophe, connu pour L'Étranger
+                        et ses réflexions sur la condition humaine.
+                    </p>
+
+                    <a href="livres.html" class="auteur-link">
+                        Découvrir ses livres <span>→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Auteur 5 -->
+            <article class="auteur-card">
+                <div class="auteur-visuel avatar-go">
+                    <span class="auteur-initiales">GO</span>
+                    <span class="auteur-badge">Littérature</span>
+                </div>
+
+                <div class="auteur-info">
+                    <span class="auteur-pays">Royaume-Uni</span>
+                    <h3>George Orwell</h3>
+                    <p>
+                        Un romancier britannique connu pour ses œuvres
+                        marquantes, notamment 1984.
+                    </p>
+
+                    <a href="livres.html" class="auteur-link">
+                        Découvrir ses livres <span>→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Auteur 6 -->
+            <article class="auteur-card">
+                <div class="auteur-visuel avatar-v">
+                    <span class="auteur-initiales">V</span>
+                    <span class="auteur-badge">Philosophie</span>
+                </div>
+
+                <div class="auteur-info">
+                    <span class="auteur-pays">France</span>
+                    <h3>Voltaire</h3>
+                    <p>
+                        Écrivain et philosophe des Lumières, célèbre
+                        notamment pour Candide.
+                    </p>
+
+                    <a href="livres.html" class="auteur-link">
+                        Découvrir ses livres <span>→</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Invitation à découvrir les livres -->
+    <section class="auteurs-cta">
+        <div>
+            <h2>Votre prochaine lecture vous attend</h2>
+            <p>
+                Découvrez notre collection et trouvez le livre
+                qui vous correspond.
+            </p>
+        </div>
+
+        <a href="livres.html" class="cta-button">
+            Explorer les livres <span>→</span>
+        </a>
+    </section>
+
+</main>
+<!-- ===== FIN PAGE AUTEURS ===== -->
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- Colonne 1 : Présentation -->
+        <div class="footer-column footer-about">
+            <h3>Bibliothèque Almaarifa</h3>
+
+            <p>
+                Votre librairie en ligne au Maroc : des livres
+                pour tous les âges, en français et en langues
+                du monde, livrés chez vous.
+            </p>
+
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">◎</a>
+                <a href="#" aria-label="YouTube">▷</a>
+                <a href="#" aria-label="WhatsApp">☏</a>
+            </div>
+        </div>
+
+        <!-- Colonne 2 : Navigation -->
+        <div class="footer-column">
+            <h3>Navigation</h3>
+            <a href="index.html">Accueil</a>
+            <a href="livres.html">Livres</a>
+            <a href="auteurs.html">Auteurs</a>
+            <a href="À propos.html">À propos</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Colonne 3 : Contact -->
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>[Votre adresse e-mail]</p>
+            <p>[Votre numéro de téléphone]</p>
+            <p>[Votre adresse, ville, Maroc]</p>
+        </div>
+
+        <!-- Colonne 4 : Service client -->
+        <div class="footer-column">
+            <h3>Service client</h3>
+            <a href="#">Questions fréquentes</a>
+            <a href="#">Livraison et retours</a>
+            <a href="contact.html">Nous écrire</a>
+            <a href="panier.html">Mon panier</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026 Bibliothèque Almaarifa. Tous droits réservés.
+        </p>
+    </div>
+
+</footer>
+</body>
+</html>

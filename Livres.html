@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="site-header">
+
+    <div class="top-bar">
+        Livraison partout au Maroc · Paiement et commande en mode démonstration
+    </div>
+
+    <div class="header-main">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">📖</span>
+            <span class="logo-text">
+                <strong>Bibliothèque Almaarifa</strong>
+                <small>Librairie en ligne</small>
+            </span>
+        </a>
+
+        <form class="search-bar" action="#" method="get">
+            <input
+                type="search"
+                name="recherche"
+                placeholder="Rechercher un titre, un auteur, une catégorie..."
+            >
+            <button type="submit" aria-label="Rechercher">⌕</button>
+        </form>
+
+        <a href="panier.html" class="cart">
+            <span class="cart-icon">🛒</span>
+            <strong>Panier</strong>
+            <span class="cart-count">0</span>
+        </a>
+
+    </div>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="index.html" >ACCUEIL</a>
+            <a href="livres.html" class="active">LIVRES</a>
+            <a href="auteurs.html">AUTEURS</a>
+            <a href="À propos.html">À PROPOS</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </nav> 
+   </header>
+   
+<!-- Section Tous nos livres -->
+<section class="meilleures-ventes" id="tous-les-livres">
+
+    <div class="section-header">
+        <span class="section-subtitle">NOTRE BIBLIOTHÈQUE</span>
+        <h2>Tous nos livres</h2>
+        <p>Découvrez notre collection et trouvez votre prochain livre préféré.</p>
+        <div class="titre-decoration"></div>
+    </div>
+
+    <div class="livres-container">
+
+        <!-- Livre 1 -->
+        <article class="livre-card">
+            <div class="livre-image">
+                <span class="badge-livre">Best-seller</span>
+                <img src="images.jpg" alt="Le Petit Prince">
+            </div>
+            <div class="livre-info">
+                <p class="livre-categorie">Roman</p>
+                <h3>Le Petit Prince</h3>
+                <p class="livre-auteur">Antoine de Saint-Exupéry</p>
+                <div class="livre-bas">
+                    <span class="livre-prix">80 DH</span>
+                    <a href="#" class="btn-livre">Voir</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Livre 2 -->
+        <article class="livre-card">
+            <div class="livre-image">
+                <img src="les mesirables.jpg" alt="Les Misérables">
+            </div>
+            <div class="livre-info">
+                <p class="livre-categorie">Littérature</p>
+                <h3>Les Misérables</h3>
+                <p class="livre-auteur">Victor Hugo</p>
+                <div class="livre-bas">
+                    <span class="livre-prix">120 DH</span>
+                    <a href="#" class="btn-livre">Voir</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Livre 3 -->
+        <article class="livre-card">
+            <div class="livre-image">
+                <span class="badge-livre">Populaire</span>
+                <img src="lalchimeste.jpg" alt="L'Alchimiste">
+            </div>
+            <div class="livre-info">
+                <p class="livre-categorie">Roman</p>
+                <h3>L'Alchimiste</h3>
+                <p class="livre-auteur">Paulo Coelho</p>
+                <div class="livre-bas">
+                    <span class="livre-prix">95 DH</span>
+                    <a href="#" class="btn-livre">Voir</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Livre 4 -->
+        <article class="livre-card">
+            <div class="livre-image">
+                <img src="le-pouvoir-du-moment-present.jpg"
+                     alt="Le pouvoir du moment présent">
+            </div>
+            <div class="livre-info">
+                <p class="livre-categorie">Développement personnel</p>
+                <h3>Le pouvoir du moment présent</h3>
+                <p class="livre-auteur">Eckhart Tolle</p>
+                <div class="livre-bas">
+                    <span class="livre-prix">110 DH</span>
+                    <a href="#" class="btn-livre">Voir</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Livre 5 -->
+        <article class="livre-card">
+            <div class="livre-image">
+                <img src="letranger.jpg" alt="L'Étranger">
+            </div>
+            <div class="livre-info">
+                <p class="livre-categorie">Littérature</p>
+                <h3>L'Étranger</h3>
+                <p class="livre-auteur">Albert Camus</p>
+                <div class="livre-bas">
+                    <span class="livre-prix">85 DH</span>
+                    <a href="#" class="btn-livre">Voir</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Livre 6 -->
+        <article class="livre-card">
+            <div class="livre-image">
+                <img src="notre dame de paris.jpg" alt="Notre dame de paris ">
+            </div>
+            <div class="livre-info">
+                <p class="livre-categorie">Classique</p>
+                <h3>Notre-Dame de Paris</h3>
+                <p class="livre-auteur">Victor Hugo</p>
+                <div class="livre-bas">
+                    <span class="livre-prix">100 DH</span>
+                    <a href="#" class="btn-livre">Voir</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Livre 7 -->
+        <article class="livre-card">
+            <div class="livre-image">
+                <img src="1984.jpg" alt="1984">
+            </div>
+            <div class="livre-info">
+                <p class="livre-categorie">Science-fiction</p>
+                <h3>1984</h3>
+                <p class="livre-auteur">George Orwell</p>
+                <div class="livre-bas">
+                    <span class="livre-prix">90 DH</span>
+                    <a href="#" class="btn-livre">Voir</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Livre 8 -->
+        <article class="livre-card">
+            <div class="livre-image">
+                <img src="candide.jpg" alt="Candide">
+            </div>
+            <div class="livre-info">
+                <p class="livre-categorie">Philosophie</p>
+                <h3>Candide</h3>
+                <p class="livre-auteur">Voltaire</p>
+                <div class="livre-bas">
+                    <span class="livre-prix">75 DH</span>
+                    <a href="#" class="btn-livre">Voir</a>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+    <footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- Colonne 1 : Présentation -->
+        <div class="footer-column footer-about">
+            <h3>Bibliothèque Almaarifa</h3>
+
+            <p>
+                Votre librairie en ligne au Maroc : des livres
+                pour tous les âges, en français et en langues
+                du monde, livrés chez vous.
+            </p>
+
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">◎</a>
+                <a href="#" aria-label="YouTube">▷</a>
+                <a href="#" aria-label="WhatsApp">☏</a>
+            </div>
+        </div>
+
+        <!-- Colonne 2 : Navigation -->
+        <div class="footer-column">
+            <h3>Navigation</h3>
+            <a href="index.html">Accueil</a>
+            <a href="livres.html">Livres</a>
+            <a href="auteurs.html">Auteurs</a>
+            <a href="À propos.html">À propos</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Colonne 3 : Contact -->
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>[Votre adresse e-mail]</p>
+            <p>[Votre numéro de téléphone]</p>
+            <p>[Votre adresse, ville, Maroc]</p>
+        </div>
+
+        <!-- Colonne 4 : Service client -->
+        <div class="footer-column">
+            <h3>Service client</h3>
+            <a href="#">Questions fréquentes</a>
+            <a href="#">Livraison et retours</a>
+            <a href="contact.html">Nous écrire</a>
+            <a href="panier.html">Mon panier</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026 Bibliothèque Almaarifa. Tous droits réservés.
+        </p>
+    </div>
+
+</footer> 
+</body>
+</html>
